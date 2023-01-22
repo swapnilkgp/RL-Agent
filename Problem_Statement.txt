@@ -1,0 +1,19 @@
+Consider the 15 × 10 grid world shown in "grid.png". We want to move our agent, denoted by the light
+blue square, to the goal which is shown as the green square. However there are certain obstacles in
+the world, denoted by dark grey squares which our agent cannot cross. The agent can move in four
+directions, that is there are four actions possible in each state, A = up, down, right, left, which
+deterministically cause the corresponding state transitions, except that actions that would take the
+agent off the grid in fact leave the state unchanged. The agent also incurs a reward of R = −1 for
+each step it takes, except when the step leads to the goal, in which case it gets a reward R = 0. Also
+take the discount factor γ = 1, that is consider the whole reward of the future states while calculating
+action values.
+
+The agent has to face another adversary, that is a strong gale. The areas affected by the wind are
+shaded in blue and the direction is specified by the arrows. When the agent moves in the affected
+region the resultant next states are shifted leftwards by the “wind,” the strength of which varies
+from row to row (denoted by the number of arrows). For example, if you try to move up in the wind,
+your resultant motion with diagonally up and left. Also note that the wind is not constant and only 80% 
+of times.
+
+Now our task is to come up with a policy that will take our agent to the goal, while maximizing the
+reward.
